@@ -1,0 +1,87 @@
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.1.2"
+tag_format = "$version"
+version_files = [
+    "cookiecutter.json",
+    "pyproject.toml"
+]
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+  | \.git
+  | \.venv
+)/
+'''
+
+[tool.mypy]
+files = [
+    "tasks"
+]
+ignore_missing_imports = true
+follow_imports = "silent"
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unused_configs = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+warn_return_any = true
+
+
+[tool.isort]
+profile = "black"
+skip = '''
+    {{cookiecutter.project_slug}}
+    | \ .venv
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = "tests"
+addopts = "--strict-markers"
+norecursedirs = [
+    ".*",
+    "build",
+    "dist",
+    "CVS",
+    "_darcs",
+    "{arch}",
+    "*.egg",
+    "venv",
+    "env",
+    "virtualenv"
+]
+markers = [
+    "slow"
+]
+
+
+[tool.coverage]
+    [tool.coverage.report]
+    show_missing = true
+    exclude_lines = [
+        # Have to re-enable the standard pragma
+        'pragma: no cover',
+
+        # Don't complain about missing debug-only code:
+        'def __repr__',
+        'if self\.debug',
+
+        # Don't complain if tests don't hit defensive assertion code:
+        'raise AssertionError',
+        'raise NotImplementedError',
+
+        # Don't complain if non-runnable code isn't run:
+        'if 0:',
+        'if __name__ == .__main__.:'
+    ]
+    omit = [
+        'env/*',
+        'venv/*',
+        '*/virtualenv/*',
+        '*/virtualenvs/*',
+        '*/tests/*'
+    ]
