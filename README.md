@@ -3,6 +3,7 @@
 This is my personal Cookiecutter template for my Python projects.
 
 ## Features
+- Python Version Manager: `pyenv`
 - Virtual Environment Manager: `pipenv`
 - Coding Style
     - Import sorter: `isort`
@@ -17,33 +18,39 @@ This is my personal Cookiecutter template for my Python projects.
 
 ## Getting Started
 
-Pyenv Python Version Manager.
-```sh
-# Pyenv
-curl https://pyenv.run | bash
-## For bash
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-## For fish
-# omf install pyenv
+For editing this project.
 
-pyenv install <VERSION>
-pyenv global <VERSION>
+### Requirements
+
+- Python (`python_ver == system`)
+- pyenv (`python_ver == x.y.z`)
+- pipenv
+- pipx (recommended)
+
+### Installation
+```
+git clone https://github.com/
+pipenv install
 ```
 
-Environment Tools
-```sh
-# Pipx for installing Python-based CLI tools
-python3 -m pip install --user pipx
-pipx install pipenv
-pipx install cookiecutter
-pipx install commitizen
-pipx install invoke
+## Usage
+
+To create a Python project using this template.
+
+```
+cookiecutter gh:birdx0810/pycc-template
+
+project_name: PyCC Template
+project_slug: pycc-template
+project_description: This is my personal Cookiecutter template for my Python projects.
+author_name: Daniel Tan
+author_email: birdx0810@gmail.com
+git_id: birdx0810
+git_server: https://github.com
+git_origin: https://github.com/birdx0810/pycc-template
+python_ver: 3.10
 ```
 
-Development Tools
-```sh
-# Install tools
-pipenv install black isort flake8 mypy pytest --dev
-```
+## Author
+
+[Daniel Tan](https://github.com/birdx0810) <birdx0810@gmail.com>
