@@ -17,6 +17,8 @@ def init(ctx, e="dev"):
     else:
         ctx.run("pipenv install --dev")
         ctx.run("git init")
+        ctx.run("git config user.name {% cookiecutter.author_name -%}")
+        ctx.run("git config user.email {% cookiecutter.author_email -%}")
         {% if cookiecutter.git_origin != "" -%}
         ctx.run("git remote set-url origin {% cookiecutter.git_origin %}")
         {%- endif %}

@@ -20,4 +20,4 @@
 
 ## Authors
 
-[{{ cookiecutter.author_name }}]({{ cookiecutter.author_web }}) <{{ cookiecutter.author_email }}>
+[{{ cookiecutter.author_name }}]({{ cookiecutter.git_server }}/{{ cookiecutter.git_id }}) <{{ cookiecutter.author_email }}>
