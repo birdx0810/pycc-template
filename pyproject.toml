@@ -12,6 +12,7 @@ line-length = 88
 include = '\.pyi?$'
 exclude = '''
 /(
+  {{cookiecutter.project_slug}}
   | \.git
   | \.venv
 )/
@@ -33,10 +34,27 @@ warn_return_any = true
 
 [tool.isort]
 profile = "black"
-skip = '''
-    {{cookiecutter.project_slug}}
-    | \ .venv
-'''
+skip = [
+    "{{cookiecutter.project_slug}}",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
 
 [tool.pytest.ini_options]
 minversion = "6.0"
