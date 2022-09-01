@@ -1,10 +1,11 @@
 {
     "project_name": "My Python Project",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
     "project_description": "This is a Python Project",
     "author_name": "John Doe",
     "author_email": "jd03@example.com",
     "author_web": "https://github.com/jd03",
+    "git_origin": "",
     "python_version": "3.10.4",
     "_template_version": "0.1.0"
 }
