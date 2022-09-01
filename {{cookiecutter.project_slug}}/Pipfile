@@ -26,4 +26,4 @@ pre-commit = "*"
 allow_prereleases = true
 
 [requires]
-python_version = "{{ cookiecutter.python_version }}"
+python_version = "{{ cookiecutter.python_ver }}"
