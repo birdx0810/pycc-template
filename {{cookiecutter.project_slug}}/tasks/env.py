@@ -12,7 +12,8 @@ def clean(ctx):
 @task
 def init(ctx, e="dev"):
     """Install virtual environment (default: dev)"""
-    {% if cookiecutter.python_ver != "system" -%}
+    {% if cookiecutter.pyenv -%}
+    {% if cookiecutter.python_version != "system" -%}
     ctx.run("pyenv install {{ cookiecutter.python_ver }}")
     ctx.run("pyenv local {{ cookiecutter.python_ver }}")
     {% else %}
@@ -21,6 +22,8 @@ def init(ctx, e="dev"):
     except:
         pass
     {%- endif %}
+    {%- endif %}
+
     if e.startswith("prod"):
         ctx.run("pipenv install --deploy")
     else:
