@@ -17,6 +17,9 @@ def init(ctx, e="dev"):
     else:
         ctx.run("pipenv install --dev")
         ctx.run("git init")
+        {% if cookiecutter.git_origin != "" -%}
+        ctx.run("git remote set-url origin {% cookiecutter.git_origin %}")
+        {%- endif %}
         ctx.run(f"{VENV_PREFIX} pre-commit install -t pre-commit")
         ctx.run(f"{VENV_PREFIX} pre-commit install -t pre-push")
         ctx.run(f"{VENV_PREFIX} pre-commit install -t commit-msg")
