@@ -6,7 +6,7 @@
     "author_name": "Daniel Tan",
     "author_email": "birdx0810@gmail.com",
     "git_id": "{{ cookiecutter.author_email.split('@')[0]}}",
-    "git_server": "https://github.com/",
+    "git_server": "https://github.com",
     "git_origin": "{{cookiecutter.git_server}}/{{cookiecutter.git_id}}/{{cookiecutter.project_slug}}",
     "python_ver": "3.10.4",
     "pyenv": true
