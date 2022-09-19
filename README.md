@@ -51,6 +51,17 @@ git_origin: https://github.com/birdx0810/pycc-template
 python_ver: 3.10
 ```
 
+### Sidenote
+To enable pre-commit on repositories, run the commands below before creating project to automatically run `pre-commit install`.
+Add the `--allow-missing-config` flag to skip running `pre-commit install` if `.pre-commit-config.yaml` is not found.
+
+```
+git config --global init.templateDir ~/.git-template
+pre-commit init-templatedir ~/.git-template [--allow-missing-config]
+```
+
+Reference: [pre-commit](https://pre-commit.com/#automatically-enabling-pre-commit-on-repositories)
+
 ## Author
 
 [Daniel Tan](https://github.com/birdx0810) <birdx0810@gmail.com>
