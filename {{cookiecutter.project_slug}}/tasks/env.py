@@ -20,7 +20,7 @@ def init(ctx, e="dev"):
         ctx.run("git config user.name {{ cookiecutter.author_name }}")
         ctx.run("git config user.email {{ cookiecutter.author_email }}")
         {% if cookiecutter.git_origin != "" -%}
-        ctx.run("git remote set-url origin {{ cookiecutter.git_origin }}")
+        ctx.run("git remote add origin {{ cookiecutter.git_origin }}")
         {%- endif %}
         ctx.run(f"{VENV_PREFIX} pre-commit install -t pre-commit")
         ctx.run(f"{VENV_PREFIX} pre-commit install -t pre-push")
