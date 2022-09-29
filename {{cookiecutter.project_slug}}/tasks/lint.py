@@ -33,6 +33,6 @@ def commit(ctx):
 
 
 @task(pre=[black, isort, flake8, mypy, commit])
-def lint(ctx):
+def all(ctx):
     """Lint all objects"""
     pass
