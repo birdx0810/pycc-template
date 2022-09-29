@@ -3,7 +3,6 @@
 This is my personal Cookiecutter template for my Python projects.
 
 ## Features
-- Python Version Manager: `pyenv`
 - Virtual Environment Manager: `pipenv`
 - Coding Style
     - Import sorter: `isort`
@@ -23,7 +22,6 @@ For editing this project.
 ### Requirements
 
 - Python (`python_ver == system`)
-- pyenv (`python_ver == x.y.z`)
 - pipenv
 - pipx (recommended)
 
@@ -48,7 +46,7 @@ author_email: birdx0810@gmail.com
 git_id: birdx0810
 git_server: https://github.com
 git_origin: https://github.com/birdx0810/pycc-template
-python_ver: 3.10
+python_ver: 3.10.4
 ```
 
 ### Sidenote
