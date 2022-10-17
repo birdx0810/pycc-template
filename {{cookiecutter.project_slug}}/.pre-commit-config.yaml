@@ -29,7 +29,7 @@ repos:
 
       - id: test
         name: test
-        stages: [commit]
+        stages: [push]
         language: system
         pass_filenames: false
         entry: inv test -a
