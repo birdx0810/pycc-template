@@ -32,5 +32,5 @@ repos:
         stages: [push]
         language: system
         pass_filenames: false
-        entry: inv test -a
+        entry: inv test.cov
         types: [python]
