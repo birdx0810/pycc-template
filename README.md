@@ -1,6 +1,6 @@
 # pycc-template
 
-This is my personal Cookiecutter template for my Python projects.
+This is a Cookiecutter template for Python projects.
 
 ## Features
 - Virtual Environment Manager: `pipenv`
@@ -17,19 +17,13 @@ This is my personal Cookiecutter template for my Python projects.
 
 ## Getting Started
 
-For editing this project.
+For developing this template.
 
 ### Requirements
 
-- Python (`python_ver == system`)
+- Python
 - pipenv
 - pipx (recommended)
-
-### Installation
-```
-git clone https://github.com/
-pipenv install
-```
 
 ## Usage
 
@@ -46,7 +40,7 @@ author_email: birdx0810@gmail.com
 git_id: birdx0810
 git_server: https://github.com
 git_origin: https://github.com/birdx0810/pycc-template
-python_ver: 3.10.4
+python_ver: 3.10
 ```
 
 ### Sidenote
