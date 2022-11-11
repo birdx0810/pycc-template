@@ -18,6 +18,17 @@
 
 <!-- Simple instruction/example on how this software is used. -->
 
+## Developer Notes
+
+```bash
+# Initialize environment for development
+inv env.init
+# For linting code
+inv lint.all
+# For running tests
+inv test.cov
+```
+
 ## Authors
 
 [{{ cookiecutter.author_name }}]({{ cookiecutter.git_server }}/{{ cookiecutter.git_id }}) <{{ cookiecutter.author_email }}>

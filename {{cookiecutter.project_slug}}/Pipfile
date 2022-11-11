@@ -27,3 +27,8 @@ allow_prereleases = true
 
 [requires]
 python_version = "{{ cookiecutter.python_ver }}"
+
+[scripts]
+main = "python src/main.py"
+lint = "inv lint.all"
+test = "inv test.cov"
